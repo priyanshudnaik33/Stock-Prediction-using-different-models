@@ -1,7 +1,7 @@
 # ARIMA model for Stock Prediction
 
  ## Intro
-To begin my journey into algorithmic trading I have made multiple models in varying complexity ranging from naive predictions to a fully convolutional neural network. The purpose of building all these models is to create a framework to build future models off of and eventually a whole training system. In addition, this was an experiment designed to see if complex models such as deep neural networks outperform simple models.
+ I have created a number of models at different levels of complexity to start my journey into algorithmic trading, ranging from simple forecasts to a fully convolutional neural network. The goal of constructing all of these models is to establish a foundation upon which to construct other models and ultimately a whole training system. Furthermore, the purpose of this experiment was to determine whether sophisticated models—like deep neural networks—perform better than simpler ones.
 </br>
 </br>
  <span style="display:block;text-align:center">![Spy Chart](/Images/spy_plot.png)</span>
@@ -19,16 +19,18 @@ To begin my journey into algorithmic trading I have made multiple models in vary
  4. [Formulas.py](https://github.com/bsamaha/Python-Trading-Robot/blob/master/Notebooks/formulas.py) - This .py file contains a miscellaneous group of functions I thought I would be using throughout this project. This file is imported into only the "Time Series Forecasting.ipynb". In the notebooks authored using Colab the relevant functions are located inside.
 
 ## Project Summary
-The resulting error from all models built and tested are shown in the bar graph below. As you can see the most simple model, a Naive forecast outperformed many of the complex deep learning algorithms in terms of error. Surprisingly to me, the LSTM with a 30 day rolling window outperformed all models.
+The bar graph below depicts the resulting error for all models generated and tested. As you can see, the simplest model, a Naive forecast, outperformed several of the more advanced deep learning algorithms in terms of inaccuracy. Surprisingly, I found that the LSTM with a 30-day rolling window outperformed all models.
+
 
 <span style="display:block;text-align:center">![Spy Chart](/Images/model_results.png)</span>
 
 
 
 ### Data
-The data was pulled using the yfinance API. The time period of the data is the entire existance of SPY ETF in January of 1993 until today's date of 9/1/2020. To update this data simply uncomment all cells in the "update data" cell and rerun. If enough time has passed you may want to alter the train,test,validate data splits.
+The data was retrieved from the yfinance API. The data spans the whole existence of the SPY ETF, from January 1993 to today's date of September 1, 2020. To update this information, simply uncomment all cells in the "update data" field and repeat. If enough time has passed, you may want to adjust the train, test, and validate data splits.
 
-This project was a univariate time series focused on predicting the close price of the next day through various methods. The data is in daily time steps. As you can see the data is just shy of 7,000 data points. The graph below shows the entire data range and how it is broken up into the train,validate,test segments.
+This project was a univariate time series aimed at predicting the next day's close price using several methodologies. The data is shown in daily time steps. As you can see, the data contains little under 7,000 data points. The graph below depicts the complete data range and how it is divided into the train, validate, and test segments.
+
 
 <span style="display:block;text-align:center">![Spy Chart](/Images/SPY_train_valid_test_plot.png)</span>
 
